@@ -1,0 +1,93 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.student{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0,0.4)), url(gym.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;  
+
+}
+.formbox{
+
+width: 380px;
+height: 480px;
+position: relative;
+margin: 6% auto;
+background: rgb(255, 255, 255);
+padding: 5px;
+border-radius:  30px;
+overflow: hidden;
+
+
+}
+.buttonbox{
+
+    width: 210px;
+    height: 35 px auto;
+    position: relative;
+    background: linear-gradient(25deg, rgb(163, 18, 18), rgb(48, 38, 184));
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius:  30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background:transparent;
+    color: rgb(0, 0, 0);
+    border: rgb(0, 0, 0);
+    outline: none;
+    position: relative;
+    border-radius:  30px;
+}
+.input-group{
+top: 180px;
+position: absolute;
+width: 280px;
+transition: 0.5s;
+}
+.inputfield{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #353333;
+    outline: none;
+    background: transparent;
+}
+.submit-bttn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(45deg, rgb(163, 18, 18), rgb(48, 38, 184));
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+
+    margin: 30px 10px 30px 0;
+}
+span{
+    color: #777777;
+    font-size: 12px;
+    bottom: 60px;
+    position: absolute;
+}
+#login{
+
+    left: 50px;
+}
+#register{
+    left: 450px;
+}
