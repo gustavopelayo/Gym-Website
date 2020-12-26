@@ -1,5 +1,16 @@
 <?php
 session_start();
+$dbh = new PDO('sqlite:db/database.db');
+$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+try {
+  $stmt = $dbh->prepare('SELECT name from muscleGroup');
+$stmt->execute();
+$result = $stmt->fetchAll();
+} catch (PDOException $e) {
+  echo $e->getMessage();
+  exit(0);
+}
+
 ?>
     <html>
 
@@ -18,15 +29,14 @@ session_start();
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
             <i class="fa fa-align-justify"></i>
-        </label>
+            </label>
             <label class="logo">FitMe</label>
             <ul>
-                <li><a href="#active">Home</a></li>
-                <li><a href="#">Chest</a></li>
-                <li><a href="#">Back</a></li>
-                <li><a href="#">Legs</a></li>
-                <li><a href="#">Arms</a></li>
-                <li><a href="#">Core</a></li>
+            <?php foreach ($result as $row) {?>
+                 <li>
+                 <a href = "listMuscleGroup.php?musclegroup=<?php echo $row["name"]?>"> <?php echo $row["name"] ?> </a>
+                </li>
+                <?php } ?> 
             </ul>
         </nav>
         <section>
