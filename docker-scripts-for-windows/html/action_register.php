@@ -12,8 +12,8 @@
     {
         global $dbh;
        
-            $stmt = $dbh->prepare('INSERT into person(username, password) VALUES (?,?)');
-            $stmt->execute(array($username,$password)); 
+            $stmt = $dbh->prepare('INSERT into person(username, password, fitnesslevel) VALUES (?,?,?)');
+            $stmt->execute(array($username,$password,0)); 
 
        
     }
