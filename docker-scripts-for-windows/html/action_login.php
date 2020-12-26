@@ -7,14 +7,14 @@
     $username = $_POST ["username"];
     $password = $_POST ["password"];
 
-    function loginIsValid($username, $password)
+    function loginIsValid($username)
     {
         global $dbh;
        
-            $stmt = $dbh->prepare('INSERT into person(username, password) VALUES (?,?)');
-            $stmt->execute(array($username, sha1($password))); 
+            $stmt = $dbh->prepare('SELECT username from person WHERE username=?');
+            $stmt->execute(array($username)); 
 
-       
+           
             return $stmt->fetch();
     }
 #if login successful
@@ -23,13 +23,17 @@
 #else
 #login failed
 
-if (loginIsValid($username, $password)){
+if ($test= loginIsValid($username)){
     $_SESSION["username"] = $username;
+    header('Location: introduction.php');
 
 }
     else {
-        $_SESSION["msg"] = "login failed!";
+        $_SESSION["msg"] =$test;
+        /*header('Location: index.php');*/
+        header('Location: index.php');
+
     }
 
-    header('Location: index.php');
+   
 ?>

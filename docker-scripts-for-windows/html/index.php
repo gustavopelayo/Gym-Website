@@ -29,8 +29,8 @@ unset($_SESSION["msg"]);
             </div>
             
             <form id = "login" class="input-group" action ="action_login.php" method = "post">
-                <input type="text" class = "inputfield" placeholder="userID" required>
-                <input type="password" class = "inputfield" placeholder="Enter Password" required>
+                <input type="text" class = "inputfield" placeholder="userID" name = "username" required>
+                <input type="password" class = "inputfield" placeholder="Enter Password" name = "password" required>
                 <input type="checkbox" class="check-box" > <span>Remember Password</span>
                 <button type = "submit" class="submit-bttn">Login</button>
                 <form> <?php echo $msg; ?> </form> 
