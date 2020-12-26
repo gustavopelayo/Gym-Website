@@ -10,20 +10,22 @@ drop table if exists positions;
 drop table if exists muscleGroup;
 drop table if exists muscle;
 drop table if exists exerciseMuscleGroupClient;
+drop table if exists fitnesslevel;
+
 
 
 CREATE TABLE person (
-	id integer primary key autoincrement,
-	name text NOT NULL    
+	username VARCHAR  primary key, 
+	password VARCHAR
 );
 
 CREATE TABLE admin (
 
-	id integer REFERENCES person(id)
+	id integer REFERENCES person(username)
 );
 CREATE TABLE client(
 
-	id integer REFERENCES person(id),
+	id integer REFERENCES person(username),
 	phoneNo integer
 );
 CREATE TABLE fitnesslevel(
