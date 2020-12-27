@@ -31,7 +31,7 @@ if ($test= loginIsValid($username)){
     else {
         $_SESSION["msg"] =$test;
         /*header('Location: index.php');*/
-        header('Location: index.php');
+        header('Location: login.php');
 
     }
 

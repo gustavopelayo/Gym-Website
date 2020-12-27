@@ -145,8 +145,16 @@ INSERT INTO exercise VALUES('Pull-ups','Forearms',800);
 
 
 INSERT INTO exercise VALUES('Front Hammer Raise','Anterior head',400);
+INSERT INTO exercise VALUES('Dumbbell Military Press','Anterior head',400);
+
+INSERT INTO exercise VALUES('Dumbbell Side Raise','Lateral head',400);
+INSERT INTO exercise VALUES('Side Raise with Elastic Band','Lateral head',700);
+INSERT INTO exercise VALUES('Dumbbell Bent-Over Reverse Fly','Lateral head',700);
+
 
 INSERT INTO exercise VALUES('Bent Over Rows','Posterior head',400);
+INSERT INTO exercise VALUES('Elastic Band Face Pulls','Posterior head',600);
+
 
 INSERT INTO exercise VALUES('Squat','Quadriceps',300);
 INSERT INTO exercise VALUES('Lunge','Quadriceps',300);

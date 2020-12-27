@@ -30,14 +30,14 @@
     try
     {
       insertUser($username, sha1($password)); 
-      header('Location: introduction.php');
+      header('Location: MainPage.php');
       $_SESSION["msg"] = "Registration sucessful!";
     }catch (PDOException $e) {
        
             $_SESSION["msg"] = "Username already exists!";
         
        
-        header('Location: index.php');
+        header('Location: login.php');
 
     }
     

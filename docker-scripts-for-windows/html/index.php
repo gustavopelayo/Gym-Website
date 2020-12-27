@@ -22,17 +22,20 @@
         <p>
             <h1>Welcome</h1>
             <br>
-            <br>
-            <br>
+         
             <section>
                 <article>
-                    You just found the website to shine a light on your path to true fitness.
-                    <br> <br>Come in and forge your better self.
+                    <br>
+                     <br>
+                     <br>
+                     <br>
+                     Come in and forge your better self.
                 </article>
             </section>
         </p>
         <div class="form">
             <form action="/login.php">
+            
                 <input type="submit" class="type" value="Sign In">
             </form>
         </div>
