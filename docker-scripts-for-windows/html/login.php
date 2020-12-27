@@ -42,10 +42,10 @@ unset($_SESSION["msg"]);
             </div>
             <div class="pass">Forgot Password?</div>
             <input type="submit" value="Login">
+            <h1><?php echo $msg; ?> </h1>
             <div class="signup_link">
                 Not a member? <a onclick="register()">Signup</a>
             </div>
-            <form> <?php echo $msg; ?> </form>
         </form>
     </div>
 

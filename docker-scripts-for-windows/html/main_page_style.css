@@ -258,3 +258,10 @@ input[type="submit"]:hover {
 #registerContainer {
     display: none;
 }
+.icon{
+
+    width:120px;
+    position: relative;
+    display: inline-block;
+
+}

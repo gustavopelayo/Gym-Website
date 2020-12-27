@@ -13,7 +13,7 @@
         global $dbh;
        
             $stmt = $dbh->prepare('INSERT into person(username, password) VALUES (?,?)');
-            $stmt->execute(array($username,$password)); 
+            $stmt->execute(array($username, sha1($password))); 
 
        
     }
@@ -29,18 +29,18 @@
 
     try
     {
-      insertUser($username, sha1($password)); 
-      header('Location: MainPage.php');
+      insertUser($username, $password); 
       $_SESSION["msg"] = "Registration sucessful!";
+      header('Location: login.php'); 
     }catch (PDOException $e) {
        
             $_SESSION["msg"] = "Username already exists!";
         
-       
-        header('Location: login.php');
+            header('Location: login.php'); 
+        
 
     }
-    
+   
 
 
 ?>

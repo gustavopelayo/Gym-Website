@@ -34,7 +34,9 @@ $result = $stmt->fetchAll();
             <ul>
             <?php foreach ($result as $row) {?>
                  <li>
-                 <a href = "listMuscleGroup.php?musclegroup=<?php echo $row["name"]?>"> <?php echo $row["name"] ?> </a>
+                   <div class = "icon">       
+                 <a href = "listMuscleGroup.php?musclegroup=<?php echo $row["name"]?>" class = "tag"> <?php echo $row["name"] ?> </a>  
+                 </div>
                 </li>
                 <?php } ?> 
             </ul>
