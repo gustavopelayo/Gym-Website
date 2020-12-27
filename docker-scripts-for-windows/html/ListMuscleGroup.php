@@ -21,7 +21,7 @@ $category = $stmt->fetchAll();
     <meta charset="utf-8">
     <title>FitMe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet " href="main_page_style.css">
+    <link rel="stylesheet " href="ListStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet">
@@ -39,17 +39,17 @@ $category = $stmt->fetchAll();
         <ul>
         <?php foreach ($result as $row) {?>
              <li>
-             <a href = "listMuscleExercises.php?muscle=<?php echo $row["name"]?>"> <?php echo $row["name"] ?> </a>
+             <span class="img-hover-zoom">
+             <img src="Images/Muscles/<?php echo $row["name"] ?>.jpg" class = "img">
+             </span>
+             <figcaption>
+             <a href = "listMuscleExercises.php?muscle=<?php echo $row["name"]?>"> <?php echo $row["name"] ?> </a>  
+             </figcaption>
             </li>
             <?php } ?> 
         </ul>
     </nav>
     </div>
-</body>
 
-
-
-
-
-
+    
 

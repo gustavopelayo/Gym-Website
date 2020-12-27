@@ -38,10 +38,9 @@ $result = $stmt->fetchAll();
                 </li>
                 <?php } ?> 
             </ul>
+
         </nav>
-        <section>
-
-        </section>
+       
     </body>
-
+      
     </html>
