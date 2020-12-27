@@ -25,7 +25,7 @@
 
 if ($test= loginIsValid($username)){
     $_SESSION["username"] = $username;
-    header('Location: introduction.php');
+    header('Location: MainPage.php');
 
 }
     else {
