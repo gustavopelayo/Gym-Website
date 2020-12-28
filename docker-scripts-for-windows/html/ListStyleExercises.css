@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url(Images/1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+h1 {
+    background: transparent;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+h1 ul {
+    float:inline-start;
+    margin-right: 20px;
+}
+
+h1 ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+h1 ul li a {
+    color: rgb(238, 236, 236);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+
+h1 ul li div {
+        color: rgb(238, 236, 236);
+        font-size: 14px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+ }
+
+a.active,
+a:hover {
+    background: #ffffff;
+    color: black;
+    transition: .5s;
+}
+div.active,
+div:hover {
+    background: #ffffff;
+    color: black;
+    transition: .5s;
+}
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: transparent;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    a.active,
+    a:hover {
+        background: none;
+        color: white;
+        font-weight: bold;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+
+
+
+
+
+.img-container {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.img{
+    width: 300px;
+    height: 200px;
+
+}
+/* [1] The container */
+.img-hover-zoom {
+    height: 300px; /* [1.1] Set it as per your need */
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  }
+  
+  /* [2] Transition property for smooth transformation of images */
+  .img-hover-zoom img {
+    transition: transform .5s ease;
+  }
+  
+  /* [3] Finally, transforming the image when container gets hovered */
+  .img-hover-zoom:hover img {
+    transform: scale(1.2);
+  }
