@@ -40,8 +40,18 @@ $result = $stmt->fetchAll();
                 </li>
                 <?php } ?> 
             </ul>
-
         </nav>
+
+        <div id="loginContainer" class="login">
+        <h1>Let's train.</h1>
+        <form id="welcome">
+            <div class="txt_field">
+                <label>Username</label>
+            </div>
+
+           
+        </form>
+    </div>
        
     </body>
       

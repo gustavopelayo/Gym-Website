@@ -41,7 +41,7 @@ $category = $stmt->fetchAll();
                <img src="Images/Exercises/<?php echo $row["name"] ?>.jpg" class = "img">
              </span>
              <figcaption>
-             <a>  <?php echo $row["name"] ?> </a>  
+             <a href = "ExerciseDemo.php?exercise=<?php echo $row["name"]?>" >  <?php echo $row["name"] ?> </a>  
              </figcaption>
                <div> Points you'll get:<?php echo $row["points"] ?> </div>
               </li>
