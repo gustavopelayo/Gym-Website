@@ -12,7 +12,7 @@
     {
         global $dbh;
        
-            $stmt = $dbh->prepare('INSERT into person(username, password) VALUES (?,?)');
+            $stmt = $dbh->prepare('INSERT into person(username, password, fitnessLevel) VALUES (?,?,0)');
             $stmt->execute(array($username, sha1($password))); 
 
        

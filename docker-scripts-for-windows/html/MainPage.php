@@ -1,5 +1,9 @@
 <?php
+
 session_start();
+
+$username= $_GET["$username"];
+
 $dbh = new PDO('sqlite:db/database.db');
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 try {
@@ -11,8 +15,19 @@ $result = $stmt->fetchAll();
   exit(0);
 }
 
+try {
+  $stmt2 = $dbh->prepare('SELECT fitnessLevel from person where username=?');
+$stmt2->execute(array($_SESSION["username"]));
+$result2 = $stmt2->fetchAll();
+} catch (PDOException $e) {
+  echo $e->getMessage();
+  exit(0);
+}
+
 ?>
-    <html>
+
+
+<html>
 
     <head>
         <meta charset="utf-8">
@@ -42,17 +57,19 @@ $result = $stmt->fetchAll();
             </ul>
         </nav>
 
-        <div id="loginContainer" class="login">
-        <h1>Let's train.</h1>
-        <form id="welcome">
-            <div class="txt_field">
-                <label>Username</label>
-            </div>
-
-           
-        </form>
-    </div>
+        <div id="welcomeContainer" class="welcome">
+           <h1>Let's start training.</h1>
+            <form id="welcome">
+                <div class="txt_field">                  
+                   <h2>Username: <?php echo $_SESSION["username"] ?></h2> 
+                   <?php foreach ($result2 as $row) {?>
+                    
+                   <h3>fitnessLevel:<?php echo $row["fitnessLevel"] ?> </h3>
+                   <?php } ?>
+               </div>
+              </form>
+         </div>
        
     </body>
       
-    </html>
+</html>

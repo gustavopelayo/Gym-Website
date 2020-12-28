@@ -36,12 +36,6 @@ CREATE TABLE exercise(
 	points integer
 );
 
-CREATE TABLE positions(
-
-	nameExercise text REFERENCES exercise,
-	repetitionsNo integer,
-	PRIMARY KEY (nameExercise)
-);
 
 CREATE TABLE muscleGroup(
 	
@@ -55,14 +49,7 @@ CREATE TABLE muscle(
 	name text PRIMARY KEY,
 	name_mg text REFERENCES muscleGroup
 );
-CREATE TABLE exerciseMuscleGroupClient(
 
-	nameExercise text REFERENCES exercise,
-	nameMuscleGroup text REFERENCES muscleGroup,
- 	IDClient text REFERENCES client,
-	PRIMARY KEY (nameExercise, nameMuscleGroup, IDClient)
-
-);
 
 
 
@@ -173,7 +160,6 @@ INSERT INTO exercise VALUES('Box Jumps','Gastrocnemius',500);
 
 INSERT INTO exercise VALUES('Garland Pose','Soleus',300);
 INSERT INTO exercise VALUES('Jumping Rope','Soleus',500);
-
 
 
 

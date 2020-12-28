@@ -2,8 +2,19 @@
 
 $exercise= $_GET["exercise"];
 
+$dbh = new PDO('sqlite:db/database.db');
+$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+try {
+  $stmt = $dbh->prepare("SELECT points from exercise WHERE name =?");
+$stmt->execute(array($exercise));
+$result = $stmt->fetchAll();
 
-?>
+$category = $stmt->fetchAll();
+} catch (PDOException $e) {
+  echo $e->getMessage();
+  exit(0);
+}
+
 ?>
    <html>
 
@@ -18,23 +29,29 @@ $exercise= $_GET["exercise"];
 </head>
 
 <body>
-    <h1>
-      
-       
+    <h1>       
         </label>
         <label class="logo">FitMe</label>
         <ul>
-               <li>
-               <span class="img-hover-zoom">
-               <img src="Images/ExerciseGif/<?php echo $exercise?>.gif" class = "img">
-               <figcaption>
-            <a> <?php echo $exercise?> </a>  
-             </figcaption>
+            <li>
+                   <span class="img-hover-zoom">
+                        <img src="Images/ExerciseGif/<?php echo $exercise?>.gif" class = "img">
+                     <figcaption>
+                        <a> <?php echo $exercise?> </a>  
+                     </figcaption> 
+                     <?php foreach ($result as $row) {?>
+
+                         <div> Points you'll get: <?php echo $row["points"] ?> </div>
+                      <?php } ?> 
+                             <div class="form">
+                             <form>
+                                   <b><input type="submit" value="Claim points!"></b>
+                              </form>
+                            </div>
+            </li>
         </ul>
     </h1>
-    <section>
 
-    </section>
 </body>
 
 </html>

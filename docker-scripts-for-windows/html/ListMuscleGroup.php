@@ -29,12 +29,13 @@ $category = $stmt->fetchAll();
 
 
 <body>
-    <div id = "page">
+
     <nav>
         
         <i class="fa fa-align-justify"></i>
+        <label class="logo" >  
+         FitMe
         </label>
-        <label class="logo">FitMe</label>
         <ul>
         <?php foreach ($result as $row) {?>
              <li>
@@ -48,7 +49,6 @@ $category = $stmt->fetchAll();
             <?php } ?> 
         </ul>
     </nav>
-    </div>
 
     
 

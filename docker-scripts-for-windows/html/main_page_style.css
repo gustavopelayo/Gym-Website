@@ -108,10 +108,10 @@ a:hover {
     }
 }
 
-.login {
+.welcome {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 20%;
     transform: translate(-50%, -50%);
     width: 400px;
     background: black;
@@ -120,92 +120,48 @@ a:hover {
     transition: 0.5s;
 }
 
-.login h1 {
+.welcome h1 {
     text-align: center;
     color: white;
     padding: 0 0 20px 0;
     border-bottom: 1px solid silver;
 }
 
-.login form {
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-
-.register {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background: black;
-    opacity: 0.8;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-.register h1 {
-    text-align: center;
-    color: white;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid silver;
-}
-
-.register form {
+.welcome form {
     padding: 0 40px;
     box-sizing: border-box;
 }
 
 form .txt_field {
     position: relative;
-    border-bottom: 2px solid #adadad;
     margin: 30px 0;
 }
 
-.txt_field input {
-    color: white;
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;
-}
 
-.txt_field label {
-    position: absolute;
+.txt_field h2 {
+    position: relative;
     top: 50%;
     left: 5px;
     left: 5px;
     color: #adadad;
     transform: translateY(-50%);
-    font-size: 16px;
+    font-size: 25px;
     pointer-events: none;
     transition: .5s;
 }
 
-.txt_field span::before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #2691d9;
+.txt_field h3 {
+    position: relative;
+    top: 50%;
+    left: 5px;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 25px;
+    pointer-events: none;
     transition: .5s;
 }
 
-.txt_field input:focus~label,
-.txt_field input:valid~label {
-    top: -5px;
-    color: #2691d9;
-}
-
-.txt_field input:focus~span::before,
-.txt_field input:valid~span::before {
-    width: 100%;
-}
 
 .pass {
     margin: -5px 0 20px 5px;
@@ -251,13 +207,10 @@ input[type="submit"]:hover {
     text-decoration: underline;
 }
 
-#loginContainer {
+#welcomeContainer {
     display: block;
 }
 
-#registerContainer {
-    display: none;
-}
 .icon{
 
     width:120px;

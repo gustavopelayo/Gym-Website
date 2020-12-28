@@ -32,7 +32,7 @@ $category = $stmt->fetchAll();
     <h1>
       
        
-        </label>
+       
         <label class="logo">FitMe</label>
         <ul>
         <?php foreach ($result as $row) {?>
@@ -48,9 +48,8 @@ $category = $stmt->fetchAll();
             <?php } ?> 
         </ul>
     </h1>
-    <section>
-
-    </section>
+   
+   
 </body>
 
 </html>
