@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $muscle= $_GET["muscle"];
 
@@ -10,11 +11,11 @@ $stmt->execute(array($muscle));
 $result = $stmt->fetchAll();
 
 $category = $stmt->fetchAll();
+
 } catch (PDOException $e) {
   echo $e->getMessage();
   exit(0);
 }
-?>
 ?>
    <html>
 

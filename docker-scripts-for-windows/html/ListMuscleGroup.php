@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $mg_name= $_GET["musclegroup"];
 

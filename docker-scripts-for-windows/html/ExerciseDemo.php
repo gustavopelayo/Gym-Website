@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $exercise= $_GET["exercise"];
 
 $dbh = new PDO('sqlite:db/database.db');
@@ -15,6 +17,27 @@ $category = $stmt->fetchAll();
   exit(0);
 }
 
+  foreach ($result as $row) {
+  
+    $_SESSION["points"]= $row["points"]; 
+  
+  }
+  
+
+
+
+
+  if(isset($_POST["bttn1"]))
+    {
+    $dbh = new PDO('sqlite:db/database.db');
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $stmt = $dbh->prepare("UPDATE person set fitnessLevel=fitnessLevel+ ? where username= ?");
+    $stmt->execute(array($_SESSION["points"], $_SESSION["username"]));
+
+    header("Location: MainPage.php?");
+
+    }
 ?>
    <html>
 
@@ -39,13 +62,14 @@ $category = $stmt->fetchAll();
                      <figcaption>
                         <a> <?php echo $exercise?> </a>  
                      </figcaption> 
-                     <?php foreach ($result as $row) {?>
-
-                         <div> Points you'll get: <?php echo $row["points"] ?> </div>
-                      <?php } ?> 
-                             <div class="form">
-                             <form>
-                                   <b><input type="submit" value="Claim points!"></b>
+               
+                        
+                         <div> Points you'll get: <?php echo $_SESSION["points"] ?> </div>
+                    
+                             <div class="form" action = "Addpoints.php">
+                             <form method = "post">
+                             
+                                   <b><input type="submit" value="Claim points!" name = "bttn1"> </b>
                               </form>
                             </div>
             </li>
