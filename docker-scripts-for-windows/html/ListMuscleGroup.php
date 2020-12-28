@@ -31,8 +31,7 @@ $category = $stmt->fetchAll();
 <body>
     <div id = "page">
     <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
+        
         <i class="fa fa-align-justify"></i>
         </label>
         <label class="logo">FitMe</label>

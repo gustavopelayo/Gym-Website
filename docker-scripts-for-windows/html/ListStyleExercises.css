@@ -68,31 +68,6 @@ div:hover {
     color: black;
     transition: .5s;
 }
-
-.checkbtn {
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-#check {
-    display: none;
-}
-
-@media (max-width: 952px) {
-    label.logo {
-        font-size: 30px;
-        padding-left: 50px;
-    }
-    h1 ul li a {
-        font-size: 16px;
-    }
-}
-
 @media (max-width: 858px) {
     .checkbtn {
         display: block;
@@ -107,7 +82,7 @@ div:hover {
         text-align: center;
         transition: all .5s;
     }
-    h1 ul li {
+    nav ul li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
@@ -121,7 +96,7 @@ div:hover {
     #check:checked~ul {
         left: 0;
     }
-
+}
 
 
 
@@ -159,4 +134,3 @@ div:hover {
   .img-hover-zoom:hover img {
     transform: scale(1.2);
   }
-}

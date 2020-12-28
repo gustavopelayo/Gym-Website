@@ -109,7 +109,7 @@ INSERT INTO muscle VALUES('Soleus', 'Calves');
 
 
 INSERT INTO exercise VALUES('Dumbbell Chest Press','Pectoralis Major',200);
-INSERT INTO exercise VALUES('Incline pushup.','Pectoralis Minor',100);
+INSERT INTO exercise VALUES('Incline push-up','Pectoralis Minor',100);
 INSERT INTO exercise VALUES('Decline push-up','Pectoralis Minor',400);
 INSERT INTO exercise VALUES('Parallel Bar Dips','Pectoralis Minor',800);
 
@@ -122,7 +122,7 @@ INSERT INTO exercise VALUES('Dumbbell Shrug','Trapezius',400);
 INSERT INTO exercise VALUES('Dumbbell Power Snatch','Trapezius',700);
 
 INSERT INTO exercise VALUES('Prone Lateral Raise','Rhomboids',300);
-INSERT INTO exercise VALUES('Front Raise Thumbs Up','Rhomboids',700);
+INSERT INTO exercise VALUES('Floor Superman','Rhomboids',200);
 
 INSERT INTO exercise VALUES('Reverse-grip bent-over row','Latissimus dorsi', 300);
 INSERT INTO exercise VALUES('Medicine Ball Slams','Latissimus dorsi',300);
@@ -140,19 +140,18 @@ INSERT INTO exercise VALUES('Overhead Tricep Extensions','Triceps',400);
 INSERT INTO exercise VALUES('Dumbbell Kickback','Triceps',600);
 
 INSERT INTO exercise VALUES('Palms-up Wrist Curl','Forearms',200);
-INSERT INTO exercise VALUES('Grip Crush','Forearms',300);
 INSERT INTO exercise VALUES('Pull-ups','Forearms',800);
 
 
-INSERT INTO exercise VALUES('Front Hammer Raise','Anterior head',400);
-INSERT INTO exercise VALUES('Dumbbell Military Press','Anterior head',400);
+INSERT INTO exercise VALUES('Overhead Press with Band','Anterior head',400);
+INSERT INTO exercise VALUES('Dumbbell Military Press','Anterior head',600);
 
 INSERT INTO exercise VALUES('Dumbbell Side Raise','Lateral head',400);
 INSERT INTO exercise VALUES('Side Raise with Elastic Band','Lateral head',700);
 INSERT INTO exercise VALUES('Dumbbell Bent-Over Reverse Fly','Lateral head',700);
 
 
-INSERT INTO exercise VALUES('Bent Over Rows','Posterior head',400);
+INSERT INTO exercise VALUES('Front Hammer Raise','Posterior head',400);
 INSERT INTO exercise VALUES('Elastic Band Face Pulls','Posterior head',600);
 
 
@@ -161,19 +160,19 @@ INSERT INTO exercise VALUES('Lunge','Quadriceps',300);
 INSERT INTO exercise VALUES('Cossack Squat','Quadriceps',600);
 INSERT INTO exercise VALUES('Single Leg Squat','Quadriceps',700);
 
-INSERT INTO exercise VALUES('Glute Bridge','Hamstrings',200);
+INSERT INTO exercise VALUES('Single-Leg Dumbbell Deadlift','Hamstrings',200);
 INSERT INTO exercise VALUES('Barbell Hip Thrust','Hamstrings',500);
 
 INSERT INTO exercise VALUES('Fire Hydrants','Glutes',400);
 INSERT INTO exercise VALUES('Side Plank Leg Raises','Glutes',600);
-INSERT INTO exercise VALUES('2 Way Bench Leg Swings','Glutes',800);
+INSERT INTO exercise VALUES('High Lunge Pose','Glutes',800);
 
 
 INSERT INTO exercise VALUES('Standing Dumbbell Calf Raise','Gastrocnemius',300);
 INSERT INTO exercise VALUES('Box Jumps','Gastrocnemius',500);
 
-INSERT INTO exercise VALUES('Hip Bridge with Heel Lift','Soleus',300);
-INSERT INTO exercise VALUES('Bent Knee Heel Raises','Soleus',500);
+INSERT INTO exercise VALUES('Garland Pose','Soleus',300);
+INSERT INTO exercise VALUES('Jumping Rope','Soleus',500);
 
 
 

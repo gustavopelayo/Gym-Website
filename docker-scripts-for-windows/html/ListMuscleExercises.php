@@ -5,7 +5,7 @@ $muscle= $_GET["muscle"];
 $dbh = new PDO('sqlite:db/database.db');
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 try {
-  $stmt = $dbh->prepare("SELECT name from exercise WHERE muscle =?");
+  $stmt = $dbh->prepare("SELECT name, points  from exercise WHERE muscle =?");
 $stmt->execute(array($muscle));
 $result = $stmt->fetchAll();
 
@@ -31,17 +31,19 @@ $category = $stmt->fetchAll();
 <body>
     <h1>
       
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
+       
         </label>
         <label class="logo">FitMe</label>
         <ul>
         <?php foreach ($result as $row) {?>
                <li>
-               
-               <a> <?php echo $row["name"] ?> </a>
-               <div> Points you'll get:+<?php echo $row["name"] ?> </div>
-               
+               <span class="img-hover-zoom">
+               <img src="Images/Exercises/<?php echo $row["name"] ?>.jpg" class = "img">
+             </span>
+             <figcaption>
+             <a>  <?php echo $row["name"] ?> </a>  
+             </figcaption>
+               <div> Points you'll get:<?php echo $row["points"] ?> </div>
               </li>
             <?php } ?> 
         </ul>
