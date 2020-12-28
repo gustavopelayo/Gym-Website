@@ -57,7 +57,7 @@ $result2 = $stmt2->fetchAll();
             </ul>
         </nav>
 
-        <div id="welcomeContainer" class="welcome">
+        <div id="Container" class="cont">
            <h1>Let's start training.</h1>
             <form id="welcome">
                 <div class="txt_field">                  

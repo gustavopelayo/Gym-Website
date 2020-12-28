@@ -108,7 +108,7 @@ a:hover {
     }
 }
 
-.welcome {
+.cont {
     position: absolute;
     top: 30%;
     left: 20%;
@@ -120,14 +120,14 @@ a:hover {
     transition: 0.5s;
 }
 
-.welcome h1 {
+.cont h1 {
     text-align: center;
     color: white;
     padding: 0 0 20px 0;
     border-bottom: 1px solid silver;
 }
 
-.welcome form {
+.cont form {
     padding: 0 40px;
     box-sizing: border-box;
 }
@@ -207,7 +207,7 @@ input[type="submit"]:hover {
     text-decoration: underline;
 }
 
-#welcomeContainer {
+#Container {
     display: block;
 }
 

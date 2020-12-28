@@ -10,10 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet">
 </head>
 <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-        <i class="fa fa-align-justify"></i>
-    </label>
+   
     <label class="logo">FitMe</label>
 </nav>
 
